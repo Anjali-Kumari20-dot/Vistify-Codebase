@@ -1,11 +1,19 @@
 const mongoose = require('mongoose');
 
+mongoose.connect('mongodb://127.0.0.1:27017/databaseName', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 const postSchema = new mongoose.Schema(
     {
         postText: {
             type: String,
             required: true,
             trim: true, // Removes unnecessary whitespace
+        },
+        user: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User',
         },
         createdAt: {
             type: Date,
@@ -23,5 +31,5 @@ const postSchema = new mongoose.Schema(
     }
 );
 
-const Post = mongoose.model('Post', postSchema);
-module.exports = Post;
+module.exports = mongoose.model('Post', postSchema);
+
