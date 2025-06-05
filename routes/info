@@ -1,0 +1,20 @@
+/route par login and signup hoga
+/profile par aapko aapki profile dikhegi and aapke saved posts dikhenge, aur ek uploaded section hoga jo abhi nhi bana rhe 
+/feed yaha pr saare images dikhegi
+/ click krke image open hojayegii save kr skte ho
+/board/:boardname poora boar dikhega
+
+##### DATABASE models
+    For your Pinterest clone, you’ll likely need four main database models in MongoDB using Mongoose:
+
+    User Model – Stores user details like username, email, password (hashed), profile picture, and bio.
+
+    Pin Model – Represents a single post with an image, title, description, creator ID, and timestamp.
+
+    Board Model – Allows users to group pins into collections, with a name, description, and linked user ID.
+
+    Comment Model – Stores user comments on pins with content, creator ID, pin ID, and timestamp.
+
+    Like Model – Stores likes on pins, linking users to the pins they have liked (user ID, pin ID, timestamp).
+
+You might also need a Like Model if you plan to track reactions, but the basics should cover essential functionality!
